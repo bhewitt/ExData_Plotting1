@@ -7,6 +7,8 @@ x$Date <- as.Date(x$Date, format = "%d/%m/%Y")
 
 #Subset dates
 y <- x[(x$Date >= as.Date("2007-02-01") & x$Date < as.Date("2007-02-03")),]
+
+#Set column "Time" as date and time
 y$Time <- as.POSIXct(paste(y$Date, y$Time), format="%Y-%m-%d %H:%M:%S")
 
 #Create plot in PNG format
