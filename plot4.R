@@ -11,9 +11,6 @@ y <- x[(x$Date >= as.Date("2007-02-01") & x$Date < as.Date("2007-02-03")),]
 #Set column "Time" as date and time
 y$Time <- as.POSIXct(paste(y$Date, y$Time), format="%Y-%m-%d %H:%M:%S")
 
-#change parameters to make 2x2 plots
-par(mfrow = c(2,2))
-
 #Plot in PNG format
 png(filename = "plot4.png", width = 480, height = 480, bg = NA)
 par(mfrow = c(2,2))
